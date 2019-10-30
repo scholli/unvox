@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{4b192cf8-617e-4f45-bad2-90db54930541}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\armadillo\imgui\imgui_impl_opengl3.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armadillo\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armadillo\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armadillo\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armadillo\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\armadillo\imgui\imgui_impl_glfw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\armadillo\imgui\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\armadillo\imgui\imgui_impl_glfw.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
