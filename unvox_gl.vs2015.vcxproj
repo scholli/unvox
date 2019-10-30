@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gl\arraybuffer.cpp" />
+    <ClCompile Include="src\gl\atomicbuffer.cpp" />
+    <ClCompile Include="src\gl\buffer.cpp" />
+    <ClCompile Include="src\gl\cubemap.cpp" />
+    <ClCompile Include="src\gl\elementarraybuffer.cpp" />
+    <ClCompile Include="src\gl\error.cpp" />
+    <ClCompile Include="src\gl\framebufferobject.cpp" />
+    <ClCompile Include="src\gl\primitives\cube.cpp" />
+    <ClCompile Include="src\gl\primitives\line.cpp" />
+    <ClCompile Include="src\gl\primitives\plane.cpp" />
+    <ClCompile Include="src\gl\program.cpp" />
+    <ClCompile Include="src\gl\query.cpp" />
+    <ClCompile Include="src\gl\renderbuffer.cpp" />
+    <ClCompile Include="src\gl\sampler.cpp" />
+    <ClCompile Include="src\gl\shader.cpp" />
+    <ClCompile Include="src\gl\shaderstoragebuffer.cpp" />
+    <ClCompile Include="src\gl\texture.cpp" />
+    <ClCompile Include="src\gl\texture1d.cpp" />
+    <ClCompile Include="src\gl\texture2d.cpp" />
+    <ClCompile Include="src\gl\texture3d.cpp" />
+    <ClCompile Include="src\gl\texturearray.cpp" />
+    <ClCompile Include="src\gl\texturebuffer.cpp" />
+    <ClCompile Include="src\gl\timer_query.cpp" />
+    <ClCompile Include="src\gl\transformfeedback.cpp" />
+    <ClCompile Include="src\gl\transformfeedback_query.cpp" />
+    <ClCompile Include="src\gl\uniformbuffer.cpp" />
+    <ClCompile Include="src\gl\util\contextinfo.cpp" />
+    <ClCompile Include="src\gl\util\init_glew.cpp" />
+    <ClCompile Include="src\gl\util\vsync.cpp" />
+    <ClCompile Include="src\gl\vertexarrayobject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\gl\arraybuffer.hpp" />
+    <ClInclude Include="include\gl\atomicbuffer.hpp" />
+    <ClInclude Include="include\gl\buffer.hpp" />
+    <ClInclude Include="include\gl\cubemap.hpp" />
+    <ClInclude Include="include\gl\elementarraybuffer.hpp" />
+    <ClInclude Include="include\gl\error.hpp" />
+    <ClInclude Include="include\gl\framebufferobject.hpp" />
+    <ClInclude Include="include\gl\glpp.hpp" />
+    <ClInclude Include="include\gl\image1d.hpp" />
+    <ClInclude Include="include\gl\primitives\cube.hpp" />
+    <ClInclude Include="include\gl\primitives\line.hpp" />
+    <ClInclude Include="include\gl\primitives\plane.hpp" />
+    <ClInclude Include="include\gl\program.hpp" />
+    <ClInclude Include="include\gl\query.hpp" />
+    <ClInclude Include="include\gl\renderbuffer.hpp" />
+    <ClInclude Include="include\gl\sampler.hpp" />
+    <ClInclude Include="include\gl\shader.hpp" />
+    <ClInclude Include="include\gl\shaderstoragebuffer.hpp" />
+    <ClInclude Include="include\gl\texture.hpp" />
+    <ClInclude Include="include\gl\texture1d.hpp" />
+    <ClInclude Include="include\gl\texture2d.hpp" />
+    <ClInclude Include="include\gl\texture3d.hpp" />
+    <ClInclude Include="include\gl\texturearray.hpp" />
+    <ClInclude Include="include\gl\texturebuffer.hpp" />
+    <ClInclude Include="include\gl\timer_query.hpp" />
+    <ClInclude Include="include\gl\transformfeedback.hpp" />
+    <ClInclude Include="include\gl\transformfeedback_query.hpp" />
+    <ClInclude Include="include\gl\uniformbuffer.hpp" />
+    <ClInclude Include="include\gl\util\contextinfo.hpp" />
+    <ClInclude Include="include\gl\util\init_glew.hpp" />
+    <ClInclude Include="include\gl\util\vsync.hpp" />
+    <ClInclude Include="include\gl\vertexarrayobject.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1CC7A266-DE72-4096-ADB4-74D248BF6BF5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>unvox_gl</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NO_MINMAX;WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>third_party\glew\include;third_party\glm;include;third_party\FreeImage\Dist\x64;third_party\FreeImage\Wrapper\FreeImagePlus\dist\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NO_MINMAX;WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>third_party\glew\include;third_party\glm;include;third_party\FreeImage\Dist\x64;third_party\FreeImage\Wrapper\FreeImagePlus\dist\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NO_MINMAX;WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>third_party\glew\include;third_party\glm;include;third_party\FreeImage\Dist\x64;third_party\FreeImage\Wrapper\FreeImagePlus\dist\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NO_MINMAX;WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>third_party\glew\include;third_party\glm;include;third_party\FreeImage\Dist\x64;third_party\FreeImage\Wrapper\FreeImagePlus\dist\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
