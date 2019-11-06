@@ -2,10 +2,10 @@
 
 in vec2 varying_texcoord;
 
-out vec4 out_color;
+layout(location = 0) out vec4 out_color;
 
 void main(void)
 {
-  gl_FragColor = vec4(varying_texcoord, 0.0, 1.0);
+  out_color = vec4(varying_texcoord, 0.0, 1.0);
 }
 

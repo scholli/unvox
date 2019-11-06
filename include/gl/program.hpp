@@ -112,8 +112,8 @@ private : // attributes
   program             (program const&) = delete;
   program& operator=  (program const&) = delete;;
 
-  GLuint      id_;
-  GLint       is_linked_;
+  GLuint      id_ = 0;
+  GLint       is_linked_ = false;
 
 } ;
 

@@ -27,6 +27,7 @@ namespace unvox { namespace gl {
 
 ////////////////////////////////////////////////////////////////////////////////
 program::program()
+: is_linked_(false)
 {
   id_ = glCreateProgram();
 }

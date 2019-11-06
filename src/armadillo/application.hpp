@@ -34,7 +34,7 @@ public:
     int counter = 0;
     bool enable_draw = true;
     float size = 1.0f;
-    glm::vec4 background = {0,0,0,0};
+    glm::vec4 background = {0.2f,0.2f,0.2f,0.2f};
 
     int window_width;
     int window_height;

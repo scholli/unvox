@@ -9,14 +9,15 @@
 
 #include <sstream>
 #include <iostream>
+#include <GL/error.hpp>
 
 #include <GLFW/glfw3.h>
 
 ///////////////////////////////////////////////////////////////////////////////
 application::application(GLFWwindow* window)
 {
-  init_program();
   init_plane();
+  init_program();
 
   glfwGetWindowSize(window, &config.window_width, &config.window_height);
 }
@@ -105,6 +106,10 @@ void application::init_program()
 
   _program->add(&vs);
   _program->add(&fs);
+
+  _program->bind_attrib_location("Position", 0);
+  _program->bind_attrib_location("Texcoord", 1);
+
   _program->link();
 }
 
@@ -122,17 +127,16 @@ void application::init_plane()
     GLfloat triangle_tc[12] = { 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f };
 
     // bind the VBO for the triangle vertices
-    _vertices->bind();
     _vertices->bufferdata(sizeof(triangle_verts), triangle_verts, GL_STATIC_DRAW);
+    _texcoords->bufferdata(sizeof(triangle_tc), triangle_tc, GL_STATIC_DRAW);
+
+    _vertices->bind();
+    _plane->enable_attrib(0);
+    _plane->attrib_array(*_vertices, 0, 2, GL_FLOAT, false, 0, 0);
 
     _texcoords->bind();
-    _texcoords->bufferdata(sizeof(triangle_verts), triangle_verts, GL_STATIC_DRAW);
-
-    _plane->enable_attrib(0);
     _plane->enable_attrib(1);
-
-    _vertices->bind_base(0);
-    _texcoords->bind_base(1);
+    _plane->attrib_array(*_vertices, 1, 2, GL_FLOAT, false, 0, 0);
 
     _plane->unbind();
 }
@@ -143,8 +147,14 @@ void application::display()
   glClearColor(config.background.x, config.background.y, config.background.z, config.background.w);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  _program->bind_attrib_location("Position", 0);
-  _program->bind_attrib_location("Texcoord", 1);
+  _plane->bind();
 
+  _program->begin();
+
+  _program->set_uniform1f("size", config.size);
   glDrawArrays(GL_TRIANGLES, 0, 6);
+
+  _program->end();
+  _plane->unbind();
+
 }
